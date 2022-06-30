@@ -5,8 +5,6 @@
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
-
 const displayDate = () => {
   let currentDate = new Date()
 
@@ -26,10 +24,7 @@ const numToString =() => {
 
 }
 
-
-
 // Write a JavaScript program to convert a string to the number.
-
 const stringToNum = () => {
 
   let num = 15
@@ -39,7 +34,6 @@ const stringToNum = () => {
 }
 
 
-
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
 // * Boolean
 // * Null
@@ -47,16 +41,14 @@ const stringToNum = () => {
 // * Number
 // * NaN
 // * String
-
 const differentTypes = (data) => {
   console.log(data);
   let isNum = Number(data);
   let isString = data.toString();
-  let isBoolean = typeof Number === isNum;
+  let isBoolean = typeof isNum === "number";
   let isUndefined;
   let isNull = null;
-  let isNan = NaN
-
+  let isNan = NaN;
 
   document.getElementById("differentTypes").innerHTML = (`The typeof ${isBoolean} is ${typeof isBoolean}. 
   The typeof ${isNum} is ${typeof isNum}. The typeof "${isString}" is ${typeof isString}. The typeof ${isUndefined} is ${typeof isUndefined}. 
@@ -65,16 +57,15 @@ const differentTypes = (data) => {
 
 
 // Write a JavaScript program that adds 2 numbers together.
+const sumOfNumbers = (a, b) => {
 
-const sumOfNumbers = (a,b) => {
-
-  document.getElementById("sumOfNumbers").innerHTML = (`The sum of two numbers is: ${a+b}`)
+  document.getElementById("sumOfNumbers").innerHTML = (`The sum of ${a} and ${b} is ${a+b}`)
 
 }
 
-// Write a JavaScript program that runs only when 2 things are true.
 
-const twoThingsAreTrue = (a,b) => {
+// Write a JavaScript program that runs only when 2 things are true.
+const twoThingsAreTrue = (a, b) => {
   if (typeof a === typeof b) {
     document.getElementById("twoThingsAreTrue").innerHTML = (`Two things (${a} and ${b}) are true: ${typeof a} === ${typeof b}`)
   } else {
@@ -82,27 +73,23 @@ const twoThingsAreTrue = (a,b) => {
   }
 }
 
+
 // Write a JavaScript program that runs when 1 of 2 things are true.
-
-const oneThingIsTrue = (a,b) => {
-  if (typeof a === Number || typeof b === Number) {
-    document.getElementById("oneThingIsTrue").innerHTML = (`One thing is true: ${typeof a === String}`)
-  }
-
-  else {
+const oneThingIsTrue = (a, b) => {
+  if (typeof a === "string" || typeof b === "string") {
+    document.getElementById("oneThingIsTrue").innerHTML = (`One thing is true: ${typeof b}`)
+  } else {
     document.getElementById("oneThingIsTrue").innerHTML = (`One thing is not true`)
   }
 }
 
+
 // Write a JavaScript program that runs when both things are not true.
+const twoThingsAreFalse = (a, b) => {
 
-const twoThingsAreFalse = (a,b) => {
-
-  if (typeof a === Number && typeof b === Number) {
-    document.getElementById("twoThingsAreFalse").innerHTML = (`Two Things are False: ${typeof a === String}`)
-  }
-
-  else {
+  if (typeof a === "number" && typeof b === "number") {
+    document.getElementById("twoThingsAreFalse").innerHTML = (`Two Things are False: ${typeof a}`)
+  } else {
     document.getElementById("twoThingsAreFalse").innerHTML = (`Two Things are False`)
   }
 }
